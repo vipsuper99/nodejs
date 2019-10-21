@@ -1,7 +1,13 @@
 var express = require('express');
 var  app = express();
 var bodyParser = require('body-parser');//bodyparser
+var low = require('lowdb');//lowdb
+var FileSync = require('lowdb/adapters/FileSync');//lowdb
+var adapter = new FileSync('db.json');
 
+db = low(adapter);
+db.defaults({ users: []})
+    .write()
 var port = 3000;//express
 
 app.use(express.json()) // for parsing application/json
@@ -10,14 +16,9 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 app.set('view engine', 'pug');//pug
 app.set('views', './views');//folder
 
-var users = [
-        {id: 1, name: 'Thinh'},
-        {id: 2, name: 'An'}
-];
-
 app.get('/users', (req, res)=>{
     res.render('users/index', {
-        users: users
+        users: db.get('users').value()
     });
 });//in ra users.
 
@@ -36,8 +37,10 @@ app.get('/users/create', (req, res) =>{
 });//hiện ra create pug.
 
 app.post('/users/create', (req, res)=> {
-    console.log(res.body);
-});
+    db.get('users').push(req.body).write();
+    res.redirect('/users');
+}); // post methor
+
 app.listen(port, ()=> {
     console.log('server listening on port' + port);
 })
