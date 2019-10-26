@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser'); //bodyparser
 var userRoute = require('./routes/user.route');
+var cookieParser = require('cookie-parser');
 
 var port = 3000;//express
 
@@ -10,6 +11,7 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 
 app.set('view engine', 'pug');//pug
 app.set('views', './views');//folder view
+app.use(cookieParser());
 
 app.use('/users', userRoute);
 
