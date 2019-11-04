@@ -1,42 +1,6 @@
 {
   "users": [
     {
-      "name": "thoong",
-      "id": "eEF2jL64"
-    },
-    {
-      "name": "namw",
-      "id": "poJrPIiO"
-    },
-    {
-      "name": "name",
-      "id": "nS-TyzLS"
-    },
-    {
-      "name": "name",
-      "id": "DBdNu83h"
-    },
-    {
-      "name": "name",
-      "id": "-k7bWmOQ"
-    },
-    {
-      "name": "name'",
-      "id": "pQ5L5SPX"
-    },
-    {
-      "name": "name",
-      "id": "80cDEaJC"
-    },
-    {
-      "name": "lan",
-      "id": "Ak8xn1mA"
-    },
-    {
-      "name": "lan",
-      "id": "NZNNfrjG"
-    },
-    {
       "name": "la",
       "id": "p4dFfdl0"
     },
@@ -58,6 +22,33 @@
       "name": "ad",
       "phone": "a",
       "id": "ptwv40vw"
+    },
+    {
+      "name": "an",
+      "phone": "a",
+      "id": "h-2vwktQ",
+      "email": "info@gmail.com",
+      "password": "123"
+    },
+    {
+      "name": "an",
+      "phone": "031222032492942",
+      "id": "DWNEVS-d"
+    },
+    {
+      "name": "vipsuper@gmail.com",
+      "phone": "123456",
+      "id": "3ajLNat5"
+    },
+    {
+      "name": "qưqw",
+      "phone": "21212qwq",
+      "id": "QoBUh3xi"
+    },
+    {
+      "name": "ad",
+      "phone": "a11",
+      "id": "oCciFVX7"
     }
   ]
 }
